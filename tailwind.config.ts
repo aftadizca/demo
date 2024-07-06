@@ -12,6 +12,7 @@ const config: Config = {
       'dosis-light': ["Dosis-Light"],
       'dosis-extrabold': ["Dosis-ExtraBold"],
       'playwrite': ["Playwrite"],
+      'monospace': ['monospace'],
 
     },
     extend: {

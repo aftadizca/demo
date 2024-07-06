@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
-import Menu from './components/HamMenu'
+import Menu from './_components/HamMenu'
 
 import "./globals.css";
 
@@ -19,7 +19,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="bg-stone-800">
-        <Menu>{children}</Menu>
+        <Menu></Menu>
+        {children}
       </body>
     </html>
   );

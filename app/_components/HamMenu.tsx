@@ -2,7 +2,7 @@
 import React, { useState } from "react"; // import state
 
 
-const Header = ({ children }: { children: React.ReactNode }) => {
+const Header = () => {
     const [isNavOpen, setIsNavOpen] = useState(false); // initiate isNavOpen state with false
 
 
@@ -13,7 +13,7 @@ const Header = ({ children }: { children: React.ReactNode }) => {
     ]
 
     const menuItemDekstop = menuItemData.map(({ name, url }) =>
-        <li key={name} className="flex min-w-32 justify-center group before:content-[''] before:absolute before:min-w-32 before:h-10  before:-z-1 hover:before:blur-2xl hover:before:bg-stone-950">
+        <li key={name} className="flex min-w-32 justify-center group before:content-[''] before:absolute before:min-w-32 before:h-10  before:-z-1 hover:before:blur-xl hover:before:bg-stone-600">
             <div className="opacity-0 py-1 group-hover:opacity-100 group-hover:text-red-500 transition-all duration-500 ease-in z-10">&#123;&nbsp;</div>
             <a className="py-1 group-hover:text-red-500 z-10" href={url}>{name}</a>
             <div className="py-1 opacity-0 group-hover:opacity-100 group-hover:text-red-500 transition-all duration-500 ease-in z-10">&nbsp;&#125;</div>
@@ -21,8 +21,8 @@ const Header = ({ children }: { children: React.ReactNode }) => {
     )
 
     return (
-        <div className="flex items-center justify-around backdrop-blur-lg  py-8 ">
-            <a className="flex justify-center py-8  before:content-[''] before:absolute before:min-w-32 before:h-10  before:-z-1 hover:before:blur-2xl hover:before:bg-stone-950" href="/">
+        <div className="flex items-center justify-around backdrop-blur-lg sticky top-0 z-10">
+            <a className="flex justify-center py-8  before:content-[''] before:absolute before:min-w-32 before:h-10  before:-z-1 hover:before:blur-xl hover:before:bg-stone-600" href="/">
                 <div className="font-playwrite font-black align-text-bottom text-xl text-red-500 drop-shadow-sm leading-10 italic">&lt;</div>
                 <div className="font-playwrite font-black text-3xl text-red-500 drop-shadow-sm italic leading-none">Afta dw</div>
                 <div className="font-playwrite font-black text-xl text-red-500 drop-shadow-sm italic leading-10">&nbsp;&#47;&gt;</div>
@@ -75,6 +75,8 @@ const Header = ({ children }: { children: React.ReactNode }) => {
                     {menuItemDekstop}
                 </ul>
             </nav>
+
+
             <style>{`
       .hideMenuNav {
         display: none;
