@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -11,23 +11,64 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+    --background-start-rgb: 20, 0, 0;
+    --background-end-rgb: 0, 20, 0;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
+  background: linear-gradient(to bottom,
       transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+} */
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+
+@layer base {
+  @font-face {
+    font-family: 'Dosis-Regular';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/Dosis.woff2") format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Dosis-Light';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/Dosis.woff2") format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Dosis-ExtraBold';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/Dosis.woff2") format('woff2');
+  }
+
+  @font-face {
+    font-family: 'Playwrite';
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/PlaywriteVN.woff2") format('woff2');
+  }
+}
+
+body {
+  background: #232526;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #414345, #232526);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
