@@ -29,39 +29,45 @@ body {
   }
 }
 
-
 @layer base {
   @font-face {
-    font-family: 'Dosis-Regular';
+    font-family: "Dosis-Regular";
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url("/fonts/Dosis.woff2") format('woff2');
-  }
-
-
-  @font-face {
-    font-family: 'Dosis-Light';
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    src: url("/fonts/Dosis.woff2") format('woff2');
+    src: url("/fonts/Dosis.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Dosis-ExtraBold';
+    font-family: "Dosis-Light";
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url("/fonts/Dosis.woff2") format('woff2');
+    src: url("/fonts/Dosis.woff2") format("woff2");
   }
 
   @font-face {
-    font-family: 'Playwrite';
+    font-family: "Dosis-ExtraBold";
     font-style: normal;
     font-weight: normal;
     font-display: swap;
-    src: url("/fonts/PlaywriteVN.woff2") format('woff2');
+    src: url("/fonts/Dosis.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "Playwrite";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/PlaywriteVN.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "KodeMono";
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    src: url("/fonts/KodeMono.woff2") format("woff2");
   }
 }
 
@@ -70,7 +76,7 @@ body {
 } */
 
 body::before {
-  content: '';
+  content: "";
   background: #232526;
   /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #414345, #232526);
