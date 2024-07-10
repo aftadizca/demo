@@ -3,6 +3,8 @@ import React, { useState, MouseEvent } from "react"; // import state
 import { Props } from "../_interfaces";
 import { useRouter } from "next/navigation";
 
+import Link from "next/link";
+
 type MenuItem = {
   name: string;
   url: string;
@@ -34,13 +36,13 @@ export const Header = ({
       <div className="z-10 translate-x-3 py-1 opacity-0 transition-all duration-500 ease-in-out-back group-hover:translate-x-0 group-hover:text-red-500 group-hover:opacity-100">
         &#123;&nbsp;
       </div>
-      <a
+      <Link
         className="z-10 py-1 group-hover:text-red-500"
         href={url}
         onClick={handleClick}
       >
         {name}
-      </a>
+      </Link>
       <div className="z-10 -translate-x-3 py-1 opacity-0 transition-all duration-500 ease-in-out-back group-hover:-translate-x-0 group-hover:text-red-500 group-hover:opacity-100">
         &nbsp;&#125;
       </div>
