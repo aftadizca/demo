@@ -6,7 +6,6 @@ interface ITerminalText {
 }
 
 export const TerminalText = ({ ascii = false, ...props }: ITerminalText) => {
-  console.log("test", ascii);
   const text = props.children.split("\\n");
 
   return (
