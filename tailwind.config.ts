@@ -13,6 +13,7 @@ const config: Config = {
       "dosis-extrabold": ["Dosis-ExtraBold"],
       playwrite: ["Playwrite"],
       monospace: ["KodeMono"],
+      "victor-mono": ['"Victor Mono Variable"'],
     },
     extend: {
       backgroundImage: {
@@ -25,6 +26,21 @@ const config: Config = {
         "in-back": "cubic-bezier(0.6,-0.28,0.74,0.05)",
         "out-back": "cubic-bezier(0.18,0.89,0.32,1.27)",
         "in-out-back": "cubic-bezier(0.68,-0.55,0.27,1.55)",
+      },
+      animation: {},
+      keyframes: {
+        typing: {
+          from: { width: "0" },
+          to: { width: "16rem" },
+        },
+        "blink-caret": {
+          "from, to": {
+            "border-color": "transparent",
+          },
+          "50%": {
+            "border-color": "orange",
+          },
+        },
       },
     },
   },

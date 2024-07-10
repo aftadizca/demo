@@ -1,32 +1,17 @@
-"use client";
-
 import React from "react";
 
-interface TerminalTextType {
+interface ITerminalText {
   ascii?: boolean;
   children: string;
 }
 
-export class TerminalText extends React.Component<TerminalTextType, {}> {
-  public static defaultProps = {
-    ascii: false,
-    children: "",
-  };
+export const TerminalText = ({ ascii = false, ...props }: ITerminalText) => {
+  console.log("test", ascii);
+  const text = props.children.split("\\n");
 
-  public render(): JSX.Element {
-    const { ascii, children } = this.props;
-    const text = children.split("\\n");
-
-    if (ascii) {
-      return (
-        <div className="ml-3 whitespace-pre font-monospace text-sm leading-tight">
-          <pre>{text.map((x) => x + "\n")}</pre>
-        </div>
-      );
-    } else {
-      return (
-        <div className="ml-3 mt-3 font-monospace text-2xl">{children}</div>
-      );
-    }
-  }
-}
+  return (
+    <div className="mx-3 mt-3 table text-wrap font-victor-mono text-lg font-thin text-red-400 lg:text-lg">
+      {"> " + props.children}
+    </div>
+  );
+};
