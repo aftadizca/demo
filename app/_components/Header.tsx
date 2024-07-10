@@ -29,9 +29,9 @@ export const Header = ({
   const menuItemDekstop = props.item.map(({ name, url }, i) => (
     <li
       key={i}
-      className="before:-z-1 before:ease-out-back group flex min-w-32 justify-center before:absolute before:h-10 before:min-w-32 before:scale-50 before:transition-all before:duration-500 before:content-[''] before:hover:scale-100 hover:before:bg-stone-600 hover:before:blur-xl"
+      className="before:-z-1 group flex min-w-32 justify-center before:absolute before:h-10 before:min-w-32 before:scale-50 before:transition-all before:duration-500 before:ease-out-back before:content-[''] before:hover:scale-100 hover:before:bg-stone-600 hover:before:blur-xl"
     >
-      <div className="ease-in-out-back z-10 translate-x-3 py-1 opacity-0 transition-all duration-500 group-hover:translate-x-0 group-hover:text-red-500 group-hover:opacity-100">
+      <div className="z-10 translate-x-3 py-1 opacity-0 transition-all duration-500 ease-in-out-back group-hover:translate-x-0 group-hover:text-red-500 group-hover:opacity-100">
         &#123;&nbsp;
       </div>
       <a
@@ -41,7 +41,7 @@ export const Header = ({
       >
         {name}
       </a>
-      <div className="ease-in-out-back z-10 -translate-x-3 py-1 opacity-0 transition-all duration-500 group-hover:-translate-x-0 group-hover:text-red-500 group-hover:opacity-100">
+      <div className="z-10 -translate-x-3 py-1 opacity-0 transition-all duration-500 ease-in-out-back group-hover:-translate-x-0 group-hover:text-red-500 group-hover:opacity-100">
         &nbsp;&#125;
       </div>
     </li>
@@ -78,7 +78,6 @@ export const Header = ({
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
-            {" "}
             // toggle class based on isNavOpen state
             <div
               className="CROSS-ICON absolute right-0 top-0 px-8 py-8"
