@@ -78,7 +78,7 @@ export const Header = ({
           </div>
 
           <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
-            // toggle class based on isNavOpen state
+            {/* toggle class based on isNavOpen state */}
             <div
               className="CROSS-ICON absolute right-0 top-0 px-8 py-8"
               onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
