@@ -1,10 +1,28 @@
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
 import { Body, Header } from "./_components";
-// Supports weights 100-700
+import localFont from "next/font/local";
 import "./globals.css";
 
-// const inter = Inter({ subsets: ["latin"] });
+const victor = localFont({
+  src: "_fonts/victor-mono-latin-wght-normal.woff2",
+  style: "normal",
+  preload: true,
+  variable: "--font-victor",
+});
+
+const victorItalic = localFont({
+  src: "_fonts/victor-mono-latin-wght-italic.woff2",
+  style: "italic",
+  preload: true,
+  variable: "--font-victor-italic",
+});
+
+const playwrite = localFont({
+  src: "_fonts/PlaywriteVN.woff2",
+  style: "normal",
+  preload: true,
+  variable: "--font-playwrite",
+});
 
 export const metadata: Metadata = {
   title: "Afta",
@@ -27,7 +45,9 @@ export default function RootLayout({
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
-      <body className="relative bg-stone-800">
+      <body
+        className={`${victor.variable} ${victorItalic.variable} ${playwrite.variable} relative bg-stone-800`}
+      >
         <Header logo="Afta" item={menuItemData}></Header>
         <Body>{children}</Body>
       </body>

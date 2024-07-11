@@ -22,7 +22,6 @@ export function Body(props: BodyProps) {
   return (
     <div className="mt-16 flex flex-col items-center justify-center lg:min-h-full lg:flex-row lg:content-center lg:justify-center lg:p-12">
       <Terminal
-        headerText={pathname}
         className={
           (leftHover ? "lg:translate-x-26 lg:scale-90 " : "") +
           "min-h-[60vh] min-w-[90vw] transition-all duration-700 ease-out-back lg:z-50 lg:min-h-[70vh] lg:min-w-[70vh] lg:translate-x-28"
@@ -34,7 +33,6 @@ export function Body(props: BodyProps) {
       <Terminal
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        headerPrompt={false}
         id="left"
         className={
           "group min-h-[60vw] min-w-[90vw] !bg-black pb-0 transition-all duration-700 ease-out-back lg:min-h-[60vh] lg:min-w-[60vh] lg:-translate-x-28 " +

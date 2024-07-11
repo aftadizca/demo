@@ -1,4 +1,4 @@
-import { Delay, TerminalCommandText, TerminalText } from "../_components";
+import { Delay, TerminalCommandText, TerminalTextHeader } from "../_components";
 
 export default function Page() {
   return (
@@ -8,8 +8,8 @@ export default function Page() {
         <span className="font-thin text-white/45"> --show</span>
       </TerminalCommandText>
       <Delay delay={4000}>
-        <TerminalText>Hi, I am Afta</TerminalText>
-        <TerminalText>Fullstack Web Developer</TerminalText>
+        <TerminalTextHeader>Hi, I am Afta</TerminalTextHeader>
+        <TerminalTextHeader>Fullstack Web Developer</TerminalTextHeader>
         <TerminalCommandText>&nbsp;</TerminalCommandText>
       </Delay>
     </>

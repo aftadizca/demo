@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useState, MouseEvent } from "react"; // import state
 import { IProps } from "../_interfaces";
 import { useRouter } from "next/navigation";
@@ -37,7 +38,7 @@ export const Header = ({
         &#123;&nbsp;
       </div>
       <Link
-        className="group-hover:font-victor-mono-italic z-10 py-1 group-hover:text-red-500"
+        className="z-10 py-1 group-hover:font-victor-mono-italic group-hover:text-red-500"
         href={url}
         onClick={handleClick}
       >
