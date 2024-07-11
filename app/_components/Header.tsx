@@ -37,7 +37,7 @@ export const Header = ({
         &#123;&nbsp;
       </div>
       <Link
-        className="z-10 py-1 group-hover:text-red-500"
+        className="group-hover:font-victor-mono-italic z-10 py-1 group-hover:text-red-500"
         href={url}
         onClick={handleClick}
       >
@@ -113,7 +113,7 @@ export const Header = ({
         </section>
 
         {/* DESKTOP-MENU  */}
-        <ul className="hidden font-monospace text-lg uppercase text-slate-50 lg:flex lg:min-w-full">
+        <ul className="hidden font-victor-mono text-lg text-slate-50 lg:flex lg:min-w-full">
           {menuItemDekstop}
         </ul>
       </nav>

@@ -12,9 +12,9 @@ export const metadata: Metadata = {
 };
 
 const menuItemData = [
-  { name: "ABOUT", url: "/about" },
-  { name: "PORTOFOLIO", url: "/portofolio" },
-  { name: "CONTACT", url: "/contact" },
+  { name: "About", url: "/about" },
+  { name: "Portofolio", url: "/portofolio" },
+  { name: "Contact", url: "/contact" },
 ];
 
 export default function RootLayout({
