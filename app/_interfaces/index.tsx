@@ -1,5 +1,6 @@
-export interface Props {
+export interface IProps {
   id?: string;
+  key?: string;
   className?: string;
   children?:
     | React.ReactNode

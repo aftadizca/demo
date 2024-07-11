@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
 import { Body, Header } from "./_components";
 // Supports weights 100-700
-import "@fontsource-variable/victor-mono";
 import "./globals.css";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -13,7 +12,7 @@ export const metadata: Metadata = {
 };
 
 const menuItemData = [
-  { name: "ABOUT", url: "/" },
+  { name: "ABOUT", url: "/about" },
   { name: "PORTOFOLIO", url: "/portofolio" },
   { name: "CONTACT", url: "/contact" },
 ];

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, MouseEvent } from "react"; // import state
-import { Props } from "../_interfaces";
+import { IProps } from "../_interfaces";
 import { useRouter } from "next/navigation";
 
 import Link from "next/link";
@@ -10,7 +10,7 @@ type MenuItem = {
   url: string;
 };
 
-interface HeaderProps extends Props {
+interface HeaderProps extends IProps {
   item: MenuItem[];
   logo: string;
 }

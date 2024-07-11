@@ -1,10 +1,13 @@
-import { Delay, TerminalCommandText, TerminalText } from "../_components";
+"use client";
+import { Delay, TerminalCommandText } from "../_components";
+import { TerminalText } from "../_components/TerminalText";
+import { useRouter } from "next/navigation";
 
-export default function Page() {
+export default function Home() {
   return (
     <>
       <TerminalCommandText typing>
-        <span className="font-bold text-white"> ./contact</span>
+        <span className="font-bold text-white"> ./about</span>
         <span className="font-thin text-white/45"> --show</span>
       </TerminalCommandText>
       <Delay delay={4000}>

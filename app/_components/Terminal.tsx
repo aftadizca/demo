@@ -1,19 +1,13 @@
 "use client";
 import { MouseEventHandler, Component } from "react";
-import { Props } from "../_interfaces";
+import { IProps } from "../_interfaces";
 
-interface ITerminal extends Props {
-  footerPrompt?: boolean;
-  headerPrompt?: boolean;
+interface ITerminal extends IProps {
   onMouseEnter?: MouseEventHandler<HTMLDivElement>;
   onMouseLeave?: MouseEventHandler<HTMLDivElement>;
 }
 
-export const Terminal = ({
-  footerPrompt = true,
-  headerPrompt = false,
-  ...props
-}: ITerminal) => {
+export const Terminal = (props: ITerminal) => {
   return (
     <div
       onMouseEnter={props.onMouseEnter}
@@ -30,36 +24,7 @@ export const Terminal = ({
         <div className="mr-2 h-3 w-3 rounded-xl bg-yellow-500"></div>
         <div className="mr-2 h-3 w-3 rounded-xl bg-green-500"></div>
       </div>
-      {/* content */}
-      <div className="table text-red-400">
-        <div className="typewriter ml-3 mt-3 font-victor-mono text-xs font-bold lg:text-base">
-          {`[root@afta ~]$`} ./about -show
-        </div>
-      </div>
       {props.children}
-      {/* terminal footer */}
-      {/* {footer && (
-            <div className="absolute bottom-3 ml-3 flex w-full justify-start">
-              <a className="mr-3 flex justify-start" href="/about">
-                <div className="mr-1 block h-5 w-5 bg-red-500 text-center text-white">
-                  ^A
-                </div>
-                <div className="block text-white">ABOUT</div>
-              </a>
-              <a className="mr-3 flex justify-start" href="/portofolio">
-                <div className="mr-1 block h-5 w-5 bg-red-500 text-center text-white">
-                  ^P
-                </div>
-                <div className="block text-white">PORTOFOLIO</div>
-              </a>
-              <a className="mr-3 flex justify-start" href="/contact">
-                <div className="mr-1 block h-5 w-5 bg-red-500 text-center text-white">
-                  ^C
-                </div>
-                <div className="block text-white">CONTACT</div>
-              </a>
-            </div>
-          )} */}
     </div>
   );
 };

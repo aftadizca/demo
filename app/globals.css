@@ -27,16 +27,15 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+}
 
+@layer components {
   .typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: 0.15em solid orange; /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     text-align: left;
     letter-spacing: 0.15em; /* Adjust as needed */
-    animation:
-      typing 2s steps(20, end),
-      blink-caret 0.75s step-end infinite;
   }
 }
 
@@ -55,6 +54,33 @@ body {
     font-weight: normal;
     font-display: swap;
     src: url("/fonts/KodeMono.woff2") format("woff2");
+  }
+
+  /* victor-mono-latin-wght-normal */
+  @font-face {
+    font-family: "Victor Mono Variable";
+    font-style: normal;
+    font-display: auto;
+    font-weight: 100 700;
+    src: url("/fonts/victor-mono-latin-wght-normal.woff2")
+      format("woff2-variations");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  /* victor-mono-latin-wght-normal */
+  /* victor-mono-latin-wght-italic */
+  @font-face {
+    font-family: "Victor Mono Variable Italic";
+    font-style: italic;
+    font-display: auto;
+    font-weight: 100 700;
+    src: url("/fonts//victor-mono-latin-wght-italic.woff2")
+      format("woff2-variations");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+      U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122,
+      U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 }
 /* body {
@@ -81,7 +107,7 @@ body::before {
   z-index: -1000;
 }
 
-/* The typing effect */
+/* The typing effect
 @keyframes typing {
   from {
     width: 30%;
@@ -91,7 +117,7 @@ body::before {
   }
 }
 
-/* The typewriter cursor effect */
+/* The typewriter cursor effect 
 @keyframes blink-caret {
   from,
   to {
@@ -99,5 +125,5 @@ body::before {
   }
   50% {
     border-color: orange;
-  }
-}
+  } 
+}*/

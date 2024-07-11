@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import plugin from "tailwindcss/plugin";
 
 const config: Config = {
   content: [
@@ -14,6 +15,7 @@ const config: Config = {
       playwrite: ["Playwrite"],
       monospace: ["KodeMono"],
       "victor-mono": ['"Victor Mono Variable"'],
+      "victor-mono-italic": ['"Victor Mono Variable Italic"'],
     },
     extend: {
       backgroundImage: {
@@ -27,11 +29,15 @@ const config: Config = {
         "out-back": "cubic-bezier(0.18,0.89,0.32,1.27)",
         "in-out-back": "cubic-bezier(0.68,-0.55,0.27,1.55)",
       },
-      animation: {},
+      animation: {
+        "typing-blink-caret":
+          "typing 2s steps(20, end), blink-caret 0.75s step-end infinite",
+        "blink-caret": "blink-caret 0.75s step-end infinite",
+      },
       keyframes: {
         typing: {
-          from: { width: "0" },
-          to: { width: "16rem" },
+          from: { width: "11rem" },
+          to: { width: "100%" },
         },
         "blink-caret": {
           "from, to": {
@@ -44,6 +50,19 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    plugin(({ matchUtilities, theme }) => {
+      matchUtilities(
+        {
+          "animate-typing-blink-caret": (value) => ({
+            animation: `typing 2s steps(20, end), blink-caret 0.75s step-end ${value}`,
+          }),
+        },
+        {
+          values: { "5": "5", "10": "10" },
+        },
+      );
+    }),
+  ],
 };
 export default config;
