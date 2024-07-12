@@ -21,6 +21,17 @@ export default function Home() {
           Learning.
         </TerminalText>
         <TerminalText>Always love to learn new things. 🤗</TerminalText>
+
+        <TerminalTextHeader>Programming Language</TerminalTextHeader>
+        <TerminalText>
+          HTML CSS Javascript/Typescript Python Golang
+        </TerminalText>
+
+        <TerminalTextHeader>Framework</TerminalTextHeader>
+        <TerminalText>
+          ReactJS NextJS SvelteJS ReactNative KerasTensorflow
+        </TerminalText>
+
         <TerminalCommandText>&nbsp;</TerminalCommandText>
       </Delay>
     </>

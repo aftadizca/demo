@@ -43,8 +43,8 @@ export function Body(props: BodyProps) {
       >
         <div
           className={
-            "mx-3 min-h-[60vw] min-w-[60vw] bg-[url('/img/afta-ascii-art.png')] bg-contain bg-bottom bg-no-repeat lg:min-h-[60vh] lg:min-w-[60vh] " +
-            (leftHover ? " bg-[url('/img/afta.png')]" : "")
+            "mx-3 min-h-[60vw] min-w-[60vw] bg-[url('/img/afta-ascii-art.avif')] bg-contain bg-bottom bg-no-repeat lg:min-h-[60vh] lg:min-w-[60vh] " +
+            (leftHover ? " bg-[url('/img/afta.avif')]" : "")
           }
         ></div>
       </Terminal>

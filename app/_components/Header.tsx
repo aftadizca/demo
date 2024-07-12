@@ -75,19 +75,25 @@ export const Header = ({
             className="space-y-2"
             onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
           >
-            <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
-            <span className="block h-0.5 w-8 animate-pulse bg-black"></span>
+            <span className="block h-1 w-8 animate-pulse rounded-sm bg-red-500"></span>
+            <span className="block h-1 w-8 animate-pulse rounded-sm bg-red-500"></span>
+            <span className="block h-1 w-8 animate-pulse rounded-sm bg-red-500"></span>
           </div>
 
-          <div className={isNavOpen ? "showMenuNav" : "hideMenuNav"}>
+          <div
+            className={
+              isNavOpen
+                ? "showMenuNav bg-black/95 backdrop:blur-3xl"
+                : "hideMenuNav"
+            }
+          >
             {/* toggle class based on isNavOpen state */}
             <div
-              className="CROSS-ICON absolute right-0 top-0 px-8 py-8"
+              className="absolute right-0 top-0 mr-7 px-7 py-7"
               onClick={() => setIsNavOpen(false)} // change isNavOpen state to false to close the menu
             >
               <svg
-                className="h-8 w-8 text-gray-600"
+                className="h-12 w-12 text-red-500"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -99,15 +105,21 @@ export const Header = ({
                 <line x1="6" y1="6" x2="18" y2="18" />
               </svg>
             </div>
-            <ul className="flex min-h-[250px] flex-col items-center justify-between text-slate-400">
-              <li className="my-8 border-b uppercase">
-                <a href="/about">About</a>
+            <ul className="flex min-h-[250px] flex-col items-center justify-between font-victor-mono text-2xl font-black text-red-500">
+              <li className="my-8 uppercase">
+                <Link onClick={() => setIsNavOpen(false)} href="/about">
+                  About
+                </Link>
               </li>
-              <li className="my-8 border-b uppercase">
-                <a href="/portfolio">Portfolio</a>
+              <li className="my-8 uppercase">
+                <Link onClick={() => setIsNavOpen(false)} href="/portofolio">
+                  Portfolio
+                </Link>
               </li>
-              <li className="my-8 border-b uppercase">
-                <a href="/contact">Contact</a>
+              <li className="my-8 uppercase">
+                <Link onClick={() => setIsNavOpen(false)} href="/contact">
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>
@@ -126,11 +138,10 @@ export const Header = ({
       .showMenuNav {
         display: block;
         position: absolute;
-        width: 100%;
+        width: 100vw;
         height: 100vh;
         top: 0;
         left: 0;
-        background: white;
         z-index: 10;
         display: flex;
         flex-direction: column;

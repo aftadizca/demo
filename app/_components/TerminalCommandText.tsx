@@ -10,7 +10,7 @@ export const TerminalCommandText = ({
   ...props
 }: ITerminalCommandText) => {
   return (
-    <div className="table text-red-400">
+    <div className="my-5 table text-red-400">
       <div
         key={props.key}
         className={
